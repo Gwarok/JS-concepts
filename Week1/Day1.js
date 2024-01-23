@@ -45,9 +45,22 @@
  * @MODULUS -> %
  */
 
-//SALES CALCULATIONS
-
+//AREA AND PERIMETER CALCULATIONS
 //parseInt
 //parseFloat
 
 let length = prompt('length of rectangle?')
+let width = prompt('width of rectangle?')
+
+let finallength = parseFloat(length)
+let finalwidth = parseFloat(width)
+
+let area = finallength * finalwidth
+let perimeter = 2 * (finallength + finalwidth)
+console.log(finallength)
+console.log(finalwidth)
+
+console.log("area")
+console.log(area)
+console.log("perimeter")
+console.log(perimeter)
