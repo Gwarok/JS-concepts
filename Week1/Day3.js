@@ -5,4 +5,12 @@ function fibonacci_sequence(n) {
     }
     return fib
 }
-console.log(fibonacci_sequence(8))
+console.log(fibonacci_sequence(5))
+// @FACTORUALS
+const factorial=  (n)=>{
+    if (n<=2){
+        return n
+    }
+    return n*factorial(n-1)
+}
+console.log(factorial(6))

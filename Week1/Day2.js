@@ -45,14 +45,33 @@
 // for (let i=0; i<10; i++) {
 //     console.log(i)
 // }
-let n= prompt('enter number')
-let sum= 0
-for (m=1; m<n;m++){
-    let p= m%3
-    let q= m%5
+// let n= prompt('enter number')
+// let sum= 0
+// for (m=1; m<n;m++){
+//     let p= m%3
+//     let q= m%5
 
-    if(p===0 || q===0){
-        sum= sum+m
-    }    
+//     if(p===0 || q===0){
+//         sum= sum+m
+//     }    
+// }
+// console.log(sum)
+
+// @FUNCTION EXPRESSION
+const add= function(a,b){
+    return a+b
 }
-console.log(sum)
+console.log(add(10,20))
+
+// @ARROW FUNCTIONS
+const add2=(a,b)=>{
+    return a+b
+}
+console.log(add2(10,20))
+
+// @TEMPLATE LITERALS
+const name='dan'
+const school='Zindua school'
+
+const sentence= `my name is ${name} currently at ${school}`
+console.log(sentence)
