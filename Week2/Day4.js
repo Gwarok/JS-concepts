@@ -10,9 +10,9 @@ const innerchild = document.createElement('div')
 innerchild.classList.add('innerchild')
 
 childcontainer.appendChild(innerchild)
-innerchild.innerHTML=`
-<div>
-    <div>
-    </div
-</div>
-`
+// parent.innerHTML=`
+// <div>
+//     <div>
+//     </div
+// </div>
+// `

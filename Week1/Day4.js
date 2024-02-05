@@ -53,7 +53,8 @@ function groupby(arr, property) {
 }
 groupby(people, 'city')
 
-let fruits= ['apples','peaches','oranges']
-fruits.push('bananas');
-fruits.unshift('watermelons');
-console.log(fruits)
+// @Array-manipulation
+// let fruits= ['apples','peaches','oranges']
+// fruits.push('bananas');
+// fruits.unshift('watermelons');
+// console.log(fruits)

@@ -64,3 +64,10 @@ console.log("area")
 console.log(area)
 console.log("perimeter")
 console.log(perimeter)
+/**
+ * @NamingRules
+ * Pascal Case- ThisIsPascalCase
+ * CamelCase- thisIsCamelCase
+ * Snake_Case- this_is_snake_case
+ * Kebab-Case-this-is-kebab-case
+ */
