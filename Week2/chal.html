@@ -3,9 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="chal.css">
+    <title>Rock Paper Scissors Game</title>
 </head>
 <body>
-    <script src = "chal.js"></script>
+
+<div class="container">
+    <h1>Rock Paper Scissors Game</h1>
+    <div id="scoreboard">
+        <p>Player 1: <span id="player1-score">0</span></p>
+        <p>Player 2: <span id="player2-score">0</span></p>
+    </div>
+    <div id="result"></div>
+    <div id="choices">
+        <button onclick="playerChoice('rock')">Rock</button>
+        <button onclick="playerChoice('paper')">Paper</button>
+        <button onclick="playerChoice('scissors')">Scissors</button>
+    </div>
+    <button onclick="resetGame()">Reset Game</button>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
