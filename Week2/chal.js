@@ -1,28 +1,30 @@
-function playerChoice(choice) {
+const container = document.querySelector('.container')
+const resultcontainer = document.querySelector('.result')
+
+const computerChoice=()=>{
     const choices = ['rock', 'paper', 'scissors'];
-    const player2Choice = choices[Math.floor(Math.random() * 3)];
+    const random = Math.floor(Math.random() * choices.length);
 
     const result = choices[random]
-
-    displayResult(choice, player2Choice, result);
-    updateScore(result);
+    return result
 }
 
-function determineWinner(player1, player2) {
-    if (player1 === player2) {
+function determineWinner(Compchoice ,player1choice) {
+    if ( player1choice === Compchoice) {
         return 'It\'s a tie!';
     } else if (
-        (player1 === 'rock' && player2 === 'scissors') ||
-        (player1 === 'paper' && player2 === 'rock') ||
-        (player1 === 'scissors' && player2 === 'paper')
+        (player1choice === 'rock' && Compchoice === 'scissors') ||
+        (player1choice === 'paper' && Compchoice === 'rock') ||
+        (player1choice === 'scissors' && Compchoice === 'paper')
     ) {
-        return 'Player 1 wins!';
+        return 'You win!';
     } else {
-        return 'Player 2 wins!';
+        return 'You lose!';
     }
 }
 
-function displayResult(player1, player2, result) {
-    const resultDiv = document.getElementById('result');
-    resultDiv.textContent = `Player 1 chose ${player1}, Player 2 chose ${player2}. ${result}`;
-}
+container.addEventListener('click',(e)=>{
+    let player1choice = e.target.innerText.toLowercase()
+    resultcontainer.innerText = determineWinner(computerChoice(), player1choice)
+
+})
