@@ -1,23 +1,33 @@
-let container= document.querySelector('.container')
+const container = document.querySelector('.container')
 
-const fetchdata = async ()=>{
-    const response= await fetch('https://rickandmortyapi.com/api/character')
-    const data = await response.json()
-    const characters= data.results
+const fetchData = async ()=>{ //asynchronous
+    const response = await fetch('https://rickandmortyapi.com/api/character') //fetch response
+    const data = await response.json() //convert the response items to json format
 
-    characters.forEach((character)=>{
-        console.log(character.name)
-        const card =document.createElement('div')
+    data.results.forEach((character)=>{
+        console.log(character)
+        const card = document.createElement('div')
         card.classList.add('card')
-        card.innerHTML=`
-            <div>
-                <img src="${character.image}" />
-            </div>
-            <p>${character.name}</p>
+        card.innerHTML = `
+            <h2>${character.name}</h2>
+            <img src='${character.image}'/>
         `
+        const episode = fetchEp(character)
+        fetchEpisode(episode, card)
         container.appendChild(card)
     })
-
 }
-fetchdata()
 
+const fetchEp =  (character) => {
+    const ep =  character.episode[0];
+    return ep
+};
+const fetchEpisode = async (url, card)=>{
+    const response = await fetch(url)
+    const data = await response.json()
+    const text = document.createElement('p')
+    text.innerText = data.name
+    card.appendChild(text)    
+}
+
+fetchData()
